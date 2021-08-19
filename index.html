@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FCC: Survey Forms</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h1 id="title">Survey vaksinasi Covid-19</h1>
+      <p id="description">Survey ini guna evaluasi kegiatan vaksinasi yang dilakukan di Sentra Vaksin</p>
+    </header>
+    <div class="container">
+      <form id="survey-form">
+        <div class="form-group">
+          <label id="name-label" for="name">Nama</label>
+          <input type="text" name="name" id="name" class="form-control" placeholder="Masukan nama" required />
+        </div>
+
+        <div class="form-group">
+          <label id="nik-label" for="nik">NIK</label>
+          <input type="text" name="nik" id="nik" class="form-control" placeholder="Masukan NIK" required />
+        </div>
+
+        <div class="form-group">
+          <label id="email-label" for="email">Email</label>
+          <input type="email" name="email" id="email" class="form-control" placeholder="Masukan Email" required />
+        </div>
+        <div class="form-group">
+          <label id="number-label" for="number">Umur<span class="clue">(opsional)</span></label>
+          <input type="number" name="age" id="number" min="18" max="60" class="form-control" placeholder="Untuk umur 16 - 60" />
+        </div>
+
+        <div class="form-group">
+          <label id="vaksinasi-label" for="vaksinUntuk">Vaksinasi Untuk</label>
+          <select name="role" id="dropdown" class="form-control" required>
+            <option disabled selected value>Pilih salah satu</option>
+            <option value="nakes">Tenaga Kesehatan</option>
+            <option value="pekerjapublik">Pekerja Publik</option>
+            <option value="lansia">Lansia</option>
+            <option value="masyarakatrentan">Masyarakat Rentan</option>
+            <option value="masyarakat">Masyarakat Umum</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label id="vaksinasi-label" for="statusVaksin">Status Vaksinasi</label>
+          <div class="radio">
+            <label><input type="radio" name="user-vaksin" value="vaksin1" class="input-radio" /> Sudah Vaksin 1</label>
+            <label><input type="radio" name="user-vaksin" value="vaksin2" class="input-radio" /> Sudah Vaksin 2</label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label id="vaksinasi-label" for="jenisVaksin">Jenis Vaksin</label>
+          <select id="most-like" name="mostLike" class="form-control" required>
+            <option disabled selected value>Pilih satu</option>
+            <option value="coronavac">Coronavac</option>
+            <option value="astrazenecca">Astra Zenecca</option>
+            <option value="moderna">Moderna</option>
+            <option value="pfizer">Pfizer</option>
+            <option value="sinopharm">Sinopharm</option>
+            <option value="novavax">Novavax</option>
+            <option value="sinovac">Sinovac</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label id="vaksinasi-label" for="jenisVaksin" class="label"> Kejadian Ikutan Pasca Imunisasi <span class="clue">(Ceklis yang dirasakan)</span></label>
+          <div class="kipi">
+            <label><input type="checkbox" class="input-checkbox" name="kipi" value="demam" /> Demam</label>
+            <label><input type="checkbox" class="input-checkbox" name="kipi" value="nyeriOtot" /> Nyeri Otot</label>
+            <label><input type="checkbox" class="input-checkbox" name="kipi" value="benjolan" /> Benjolan</label>
+            <label><input type="checkbox" class="input-checkbox" name="kipi" value="lapar" /> Lapar</label>
+            <label><input type="checkbox" class="input-checkbox" name="kipi" value="kantuk" /> Kantuk</label>
+            <label><input type="checkbox" class="input-checkbox" name="kipi" value="flu" /> Flu</label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <p>Ada Keluhan lain ?</p>
+          <textarea id="comments" class="input-textarea" name="comment" he placeholder="Masukan keluhan disini bila ada"></textarea>
+        </div>
+
+        <div class="form-group">
+          <button type="submit" id="submit" class="btn btn-success kirim">Submit</button>
+        </div>
+      </form>
+    </div>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
